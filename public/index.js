@@ -1,18 +1,12 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/menu.styles.css';
 import $ from "jquery";
+/*import '../src/main.index.js';*/
 
-/*$(document).ready(function( $ ) {
-  
-  // $ Works! You can test it with next line if you like
-  // console.log($);
-  
-});*/
 
 /* bootstrap dropdown hover menu */
-$(document).ready(function(){
+
   $('ul.nav li.dropdown').hover(function() 
     {
       $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
@@ -20,35 +14,28 @@ $(document).ready(function(){
     {
       $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
     });
-  });
+  
 
 /* sticy menubar*/
-$(document).ready(function(){
-var win = $(window),
+/*var win = $(window),
 
     nav = $('nav'),
 
     pos = nav.offset().top,
-
         sticky = function(){ 
-        win.scrollTop() > pos ?
+      win.scrollTop() > pos ?
         nav.addclassName('sticky')
       : nav.removeclassName('sticky') }
 
-win.scroll(sticky)
- });
-
-/*
-
+win.scroll(sticky)*/
+ 
 /* Sidebar in and out function 
-$(document).ready(function(){
-
-var acc = document.getElementsByclassName("accordion");
+var acc = document.getElementsByclassNameName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
+    this.classNameList.toggle("active");
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
@@ -56,8 +43,8 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "block";
     }
   });
-} 
-}); */
+} */
+
 
 /*side menubar */
 
@@ -105,7 +92,7 @@ class Menubar extends React.Component {
 	render() {
 	return   (
 
-<nav id="sticky-menubar" className="navbar navbar-inverse">
+<nav id="sticky-menubar" className="navbar navbar-inverse" role="navigation">
   <div className="body-wrap">
         <div className="container-fluid">
           <div className="navbar-header" id="navbar-button">
@@ -166,7 +153,7 @@ class Menubar extends React.Component {
   
 }}
 
-ReactDOM.render(<Menubar />, document.getElementById('mainmenu'));
+ReactDOM.render(<Menubar />, document.getElementById('root'));
 
 
 
